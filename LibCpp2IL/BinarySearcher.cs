@@ -163,7 +163,7 @@ public class BinarySearcher(Il2CppBinary binary, int methodCount, int typeDefini
             var sanityCheckNumberOfModules = Math.Min(400, LibCpp2IlMain.TheMetadata!.imageDefinitions.Length);
             var pSomewhereInCodegenModules = pMscorlibCodegenEntryInCodegenModulesList.AsEnumerable();
             var numModuleDefs = LibCpp2IlMain.TheMetadata!.imageDefinitions.Length;
-            var initialBacktrack = numModuleDefs - 10;
+            var initialBacktrack = 0;
 
             pSomewhereInCodegenModules = pSomewhereInCodegenModules.Select(va => va - ptrSize * (ulong)initialBacktrack);
 
